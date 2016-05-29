@@ -1,0 +1,359 @@
+<!------------------------------------------------------------------------------------------------------>
+
+<div class="contenedor">
+
+<!------------------------------------------------------------------------------------------------------>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">        
+      <div class="navbar-header">
+        <button id="boton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#section0" du-smooth-scroll>
+          <img src="img/isotipo.png" id="isotipo">
+        </a>
+        <a class="navbar-brand" href="#section0" du-smooth-scroll>
+          <img src="img/logotipo.png" id="logotipo">
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1"  du-smooth-scroll du-scrollspy class="">{{home.language.text1}}</a></li>
+          <li><a href="#section2"  du-smooth-scroll du-scrollspy class="">{{home.language.text2}}</a></li>
+          <li><a href="#section3"  du-smooth-scroll du-scrollspy class="">{{home.language.text3}}</a></li>
+          <li><a href="#section4"  du-smooth-scroll du-scrollspy class="">{{home.language.text4}}</a></li>
+          <li>
+            <a href="#section5"  du-smooth-scroll du-scrollspy class="" ng-click="home.toggleModal()">
+              {{home.language.text5}}
+            </a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="" ng-click="home.translate()">{{home.language.idioma}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!------------------------------------------------------------------------------------------------------>
+
+  <section class="section0" id="section0">
+    <img src="img/logotipo_completo.png" id="logotipo_completo" class="img-responsive center-block">
+    <div id="text_philosophy">
+      <p>
+        {{ home.language.philosophy }}
+      </p>
+    </div>
+  </section>
+
+<!------------------------------------------------------------------------------------------------------>
+
+  <section class="section1" id="section1">
+    <div class="img-container">
+      <img src="img/quienes_somos.png" class="img1" >
+    </div>
+    <div class="text-container">
+      <div class="section-title-left">
+        <p>{{home.language.about}}</p>
+       </div>
+      <div class="informacion1">
+        <p>{{home.language.text_about}}</p>  
+      </div>
+    </div>
+  </section>
+
+<!------------------------------------------------------------------------------------------------------>
+
+  <section class="section2" id="section2">
+    <div id="carousel-example-generic1" class="carousel slide carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic1" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic1" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+
+        <div class="item active carouser1-item1">
+          <div class="img-container">
+            <img src="img/vision.png" class="img1" >
+          </div>
+          <div class="text-container">
+            <div class="section-title-left">
+              <p>{{home.language.vision}}</p>
+             </div>
+            <div class="informacion1">
+              <p>{{home.language.text_vision}}</p>  
+            </div>
+          </div>  
+          <div class="carousel-caption"></div>
+        </div>
+
+        <div class="item carouser1-item2">
+          <div class="img-container2">
+            <img src="img/mision.png" class="img2" >
+          </div>
+          <div class="text-container">
+            <div class="section-title-right">
+              <p>{{home.language.mission}}</p>
+             </div>
+            <div class="informacion2">
+              <p>{{home.language.text_mission}}</p>  
+            </div>
+          </div>  
+          <div class="carousel-caption"></div>
+        </div>
+
+      <a class="left carousel-control" href="#carousel-example-generic1" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic1" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+
+<!------------------------------------------------------------------------------------------------------>
+
+  <section class="section3" id="section3">
+    <div id="carousel-example-generic2" class="carousel slide carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="4"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="5"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="6"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="7"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+
+        <div class="item active carouser2-item1">
+          <div class="img-container">
+            <img src="img/area_legal.png" class="img1" >
+          </div>
+          <div class="text-container">
+            <div class="section-title-left">
+              <p>{{home.language.legal_area}}</p>
+             </div>
+            <div class="informacion1">
+              <p class="">{{home.language.service1}}</p>
+              <p class="">{{home.language.service2}}</p> 
+              <p class="">{{home.language.service3}}</p>
+              <p class="">{{home.language.service4}}</p>
+              <p class="">{{home.language.service5}}</p>
+            </div>
+          </div>  
+          <div class="carousel-caption"></div>
+        </div>
+
+        <div class="item carouser2-item2">
+          <div class="img-container2">
+            <img src="img/area_contable.png" class="img2" >
+          </div>
+          <div class="text-container">
+            <div class="section-title-right">
+              <p>{{home.language.accounting_area}}</p>
+            </div>
+            <div class="informacion2">
+              <p>{{home.language.service6}}</p> 
+              <p>{{home.language.service7}}</p>  
+            </div>
+          </div>  
+          <div class="carousel-caption"></div>
+        </div>
+
+        <div class="item carouser2-item3">
+          <div class="img-container">
+            <img src="img/derecho_civil.png" class="img1" >
+          </div>
+          <div class="text-container">
+            <div class="section-title-left">
+              <p>{{home.language.common_law}}</p>
+             </div>
+            <div class="informacion1">
+              <p>{{home.language.common_law_text}}</p>  
+            </div>
+          </div>  
+          <div class="carousel-caption"></div>
+        </div>
+
+        <div class="item carouser2-item4">
+          <div class="img-container2">
+            <img src="img/derecho_nna.png" class="img2" >
+          </div>
+          <div class="text-container">
+            <div id="text_minor">
+              <p>{{home.language.minor_law}}</p>
+             </div>
+            <div class="informacion2">
+              <p>{{home.language.minor_law_text}}</p>  
+            </div>
+          </div>  
+          <div class="carousel-caption"></div>
+        </div>
+
+        <div class="item carouser2-item5">
+          <div class="img-container">
+            <img src="img/derecho_mercantil.png" class="img1" >
+          </div>
+          <div class="text-container">
+            <div class="section-title-left">
+              <p>{{home.language.business_law}}</p>
+             </div>
+            <div class="informacion1">
+              <p>{{home.language.business_law_text}}</p>  
+            </div>
+          </div>  
+          <div class="carousel-caption"></div>
+        </div>
+
+        <div class="item carouser2-item6">
+          <div class="img-container2">
+            <img src="img/derecho_inmobiliario.png" class="img2" >
+          </div>
+          <div class="text-container">
+            <div class="section-title-right">
+              <p>{{home.language.property_law}}</p>
+             </div>
+            <div class="informacion2">
+              <p>{{home.language.property_law_text}}</p>  
+            </div>
+          </div>  
+          <div class="carousel-caption"></div>
+        </div>
+
+        <div class="item carouser2-item7">
+          <div class="img-container">
+            <img src="img/derecho_intelectual.png" class="img1" >
+          </div>
+          <div class="text-container">
+            <div class="section-title-left">
+              <p>{{home.language.intellectual_property}}</p>
+            </div>
+            <div class="informacion1">
+              <p>{{home.language.intellectual_property_text}}</p>  
+            </div>
+          </div>  
+          <div class="carousel-caption"></div>
+        </div>
+
+        <div class="item carouser2-item8">
+          <div class="img-container2">
+            <img src="img/derecho_sucesoral.png" class="img2" >
+          </div>
+          <div class="text-container">
+            <div class="section-title-right">
+              <p>{{home.language.probate_law}}</p>
+             </div>
+            <div class="informacion2">
+              <p>{{home.language.probate_law_text}}</p>  
+            </div>
+          </div>  
+          <div class="carousel-caption"></div>
+        </div>
+
+      </div>
+      <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+
+<!------------------------------------------------------------------------------------------------------>
+
+  <section class="section4" id="section4">
+
+  <div class="row">
+
+    
+    <div class="col-xs-6">
+       <div class="box-member">
+        <p class="name-member">
+          Client's name
+        </p>
+        <p class="profession-member">
+          degree
+        </p>
+        <p class="university-member">
+          university
+        </p>
+      </div>
+    </div>
+
+    <div class="col-xs-6">
+      <div class="box-member">
+        <p class="name-member">
+          Client's name
+        </p>
+        <p class="profession-member">
+          degree
+        </p>
+        <p class="university-member">
+          university
+        </p>
+      </div>
+    </div>
+
+    <div class="col-xs-6">
+      <div class="box-member">
+        <p class="name-member">
+          Client's name
+        </p>
+        <p class="profession-member">
+          degree
+        </p>
+        <p class="university-member">
+          university
+        </p>
+      </div>
+    </div>
+
+
+     
+  </div>
+  </section>
+
+<!------------------------------------------------------------------------------------------------------>
+
+  <section class="section5" id="section5">
+    <iframe id="mapa" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJEz2SuviqK4wRaVoljXkBJXI&key=AIzaSyAWkU4YpdNC5_DDjD2p7as42i8hp49wGzc" allowfullscreen>      
+    </iframe>
+    <div id="blanco"></div>
+    <footer class="footer">
+      <div class="container">
+        <p>
+          Copyright © Erick González & Niolberth Rodríguez. {{home.language.contact_us}}. {{home.language.footer}}
+        </p>
+      </div>
+    </footer>
+  </section>
+
+<!------------------------------------------------------------------------------------------------------>
+
+  <modal title="{{home.language.modal_message}}" visible="home.showModal" > 
+    <form role="form">
+      <div class="form-group">
+      <div>
+        <label>{{home.language.client_email}}</label>
+      </div>
+      <div>
+         <label>{{home.language.client_phone_number}}</label>
+      </div>
+      </div>
+    </form>
+  </modal>
+
+<!------------------------------------------------------------------------------------------------------>
+
+</div>

@@ -1,0 +1,678 @@
+/*-------------------------------------------------------------------------------------*/
+/*  GENERALES:                                                                         */
+/*-------------------------------------------------------------------------------------*/
+
+@font-face
+  {
+    font-family : "Quicksand_Light";
+    src         : url( "../fonts/Quicksand_Light.otf" ) format( "opentype" );
+  }
+
+@font-face
+  {
+    font-family : "Quicksand_Book";
+    src         : url( "../fonts/Quicksand_Book.otf" ) format( "opentype" );
+  }
+
+/*-------------------------------------------------------------------------------------*/
+
+body
+  {
+    background-image      : url( "../img/background.png" );
+    background-size       : 100vw 100vh;
+    background-repeat     : no-repeat;
+    background-attachment : fixed;
+  }
+
+/*-------------------------------------------------------------------------------------*/
+/*  NAVBAR:                                                                            */
+/*-------------------------------------------------------------------------------------*/
+
+.navbar-default .navbar-nav > li > a:focus ,
+.navbar-default .navbar-nav > li > a:hover
+  {
+    color : #FFFFFF;
+  }
+
+.navbar-default
+  {
+    background-color : rgba( 0 , 0 , 0 , 0.5 );
+    border           : none;
+    height           : 70px;
+  }
+
+.navbar-default .navbar-nav > li > a ,
+.navbar-default .navbar-text
+  {
+    color : #FFFFFF;
+  }
+
+.navbar-toggle
+  {
+    margin-top : 18px;
+  }
+
+.navbar-default .navbar-collapse ,
+.navbar-default .navbar-form
+  {
+    background-color : rgba( 0 , 0 , 0 , 0.5 );
+    margin-top       : 8px;
+  }
+
+.navbar-default .navbar-brand
+  {
+    margin-top : 8px;
+  }
+
+@media ( min-width: 768px )
+  {  
+    .navbar-default .navbar-collapse ,
+    .navbar-default .navbar-form
+      {
+        background-color : rgba(0,0,0,0);
+        margin-top       : 3px;
+      }
+    
+    .navbar-nav > li > a
+      {
+        padding-top : 21px;
+      }
+
+    .navbar > .container .navbar-brand , 
+    .navbar > .container-fluid .navbar-brand
+      {
+        margin-top : 8px;
+      }
+  }
+
+#isotipo
+  {
+    height   : 250%;
+    position : relative;
+    top      : -13px;
+  }
+
+#logotipo
+  {
+    height        : 150%;
+    position      : relative;
+    top           : -3px;
+    padding-right : 10px;
+  }
+
+@media screen and ( min-width: 0px ) and ( max-width: 400px )
+  {
+    #logotipo
+      {
+        display : none
+      }
+  }
+
+@media screen and ( min-width: 768px ) and ( max-width: 1200px )
+  {
+    #logotipo
+      {
+        display : none
+      }
+  }
+
+a
+  { 
+    -webkit-transition : font-size 0.5s;
+    transition         : font-size 0.5s;
+    font-family        : "Quicksand_Light";
+    color              : #FFFFFF;
+    font-size          : 1.2em;
+  }
+
+a.active , 
+a:hover
+  {
+    -webkit-transition : font-size 0.5s;
+    transition         : font-size 0.5s;
+    font-size          : 1.25em;
+  }
+
+a.active
+  {
+    -webkit-transition : font-family 0.5s;
+    transition         : font-family 0.5s;
+    font-family        : "Quicksand_Book";
+  }
+
+@media screen and ( min-width: 768px ) and ( max-width: 1000px )
+  {
+      a
+        { 
+          -webkit-transition : font-size 0.5s;
+          transition         : font-size 0.5s;
+          font-family        : "Quicksand_Light";
+          color              : #FFFFFF;
+          font-size          : 1em;
+        }
+
+      a.active , 
+      a:hover
+        {
+          -webkit-transition : font-size 0.5s;
+          transition         : font-size 0.5s;
+          font-size          : 1.05em;
+        }
+  }
+
+/*-------------------------------------------------------------------------------------*/
+/*  CARRUSEL:                                                                          */
+/*-------------------------------------------------------------------------------------*/
+
+.carousel
+  {
+    height : 100vh;
+  }
+
+.carousel-fade .carousel-inner .item
+  {
+    opacity             : 0;
+    transition-property : opacity;
+  }
+
+.carousel-fade .carousel-inner .active
+  {
+    opacity : 1;
+  }
+
+.carousel-fade .carousel-inner .active.left  ,
+.carousel-fade .carousel-inner .active.right
+  {
+    left    : 0;
+    opacity : 0;
+    z-index : 1;
+  }
+
+.carousel-fade .carousel-inner .next.left  ,
+.carousel-fade .carousel-inner .prev.right
+  {
+    opacity : 1;
+  }
+
+.carousel-fade .carousel-control
+  {
+    z-index : 2;
+  }
+
+@media all and ( transform-3d ) , ( -webkit-transform-3d )
+  {
+    .carousel-fade .carousel-inner > .item.next         ,
+    .carousel-fade .carousel-inner > .item.active.right
+      {
+        opacity           : 0;
+        -webkit-transform : translate3d( 0 , 0 , 0 );
+                transform : translate3d( 0 , 0 , 0 );
+      }
+
+    .carousel-fade .carousel-inner > .item.prev        ,
+    .carousel-fade .carousel-inner > .item.active.left
+      {
+        opacity           : 0;
+        -webkit-transform : translate3d( 0 , 0 , 0 );
+                transform : translate3d( 0 , 0 , 0 );
+      }
+    .carousel-fade .carousel-inner > .item.next.left  ,
+    .carousel-fade .carousel-inner > .item.prev.right ,
+    .carousel-fade .carousel-inner > .item.active 
+      {
+        opacity           : 1;
+        -webkit-transform : translate3d( 0 , 0 , 0 );
+                transform : translate3d( 0 , 0 , 0 );
+      }
+  }
+
+/*-------------------------------------------------------------------------------------*/
+/*  SECCIONES:                                                                         */
+/*-------------------------------------------------------------------------------------*/
+
+.section0       ,
+.section1       ,
+.section2       ,
+.section3       ,
+.section4       ,
+.section5       ,
+.img-container  ,
+.img-container2 ,
+.text-container
+  {
+    overflow : hidden;
+    width    : 100%;
+    height   : 100vh;
+  }
+
+.img-container2
+  {
+    vertical-align : bottom;
+    display        : table-cell;
+  }
+
+.text-container
+  {
+    margin-top: -100vh;
+  }
+
+.img1 ,
+.img2
+  {
+    width  : 100%;
+    height : 100%;
+  }
+
+@media screen and ( min-width: 768px ) and ( max-width: 1000px )
+  {
+    .img1
+      {
+        margin-left : 10vw;
+        width       : 100%;
+        height      : auto;
+      }
+
+    .img2
+      {
+        margin-left : -10vw;
+        width       : 100%;
+        height      : auto;
+      }
+  }
+
+@media screen and ( min-width: 0px ) and ( max-width: 768px )
+  {
+    .img1
+      {
+        margin-left : 100px;
+        width       : 100%;
+        height      : auto;
+      }
+
+    .img2
+      {
+        margin-left : -100px;
+        width       : 100%;
+        height      : auto;
+      }
+  }
+
+/*-------------------------------------------------------------------------------------*/
+/*  SECCION 0:                                                                         */
+/*-------------------------------------------------------------------------------------*/
+
+#logotipo_completo
+  {
+    width     : 80vw;
+    position  : relative;
+    top       : 50%;
+    transform : translateY( -50% );
+    padding   : 5%;
+  }
+
+
+  @media ( min-width: 768px )
+    {  
+    #logotipo_completo
+      {
+        width     : 60vw;
+        position  : relative;
+        top       : 50%;
+        transform : translateY( -50% );
+        padding   : 5%;
+      }
+    }
+
+/*-------------------------------------------------------------------------------------*/
+/*  SECCION 4:                                                                         */
+/*-------------------------------------------------------------------------------------*/
+
+.box-member
+{
+    font-family: "Quicksand_Light";
+    width: 30vw;
+    position: relative;
+    padding: 2%;
+    text-align: center;
+    margin-top: 25vh;
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+
+.name-member
+{
+  font-size: 1.9em;
+}
+
+.profession-member
+{
+  font-size: 1.2em;
+}
+
+.university-member
+{
+  font-size: 1.2em;
+}
+
+/*-------------------------------------------------------------------------------------*/
+/*  SECCION 5:                                                                         */
+/*-------------------------------------------------------------------------------------*/
+
+#blanco
+  {
+    position         : relative;
+    z-index          : 90;
+    background-color : #FFFFFF;
+    height           : 30px;
+    margin-top       : -30px;
+  }
+
+.footer
+  {
+    position         : relative;
+    z-index          : 90;
+    background-color : rgba( 0 , 0 , 0 , 0.5 );
+    border           : none;
+    height           : 30px;
+    margin-top       : -30px;
+  }
+
+.footer p
+  {
+    text-align: right;
+    -webkit-transition : font-size 0.5s;
+    transition         : font-size 0.5s;
+    margin-top         : 6px;
+    font-family        : "Quicksand_Book";
+    color              : #FFFFFF;
+    font-size          : 0.8em;
+  }
+
+.footer p:hover
+  {
+    -webkit-transition : font-size 0.5s;
+    transition         : font-size 0.5s;
+    font-size          : 0.82em;
+  }
+
+@media screen and ( min-width: 0px ) and ( max-width: 718px )
+  {
+    .footer ,
+    #blanco 
+    {
+      height     : 50px;
+      margin-top : -50px;
+    }  
+
+    .footer p
+    {
+      margin-top : 8px; 
+    }
+  }
+
+  #mapa
+    {
+      height : 100%;
+      width  : 100%;
+    }
+
+/*-------------------------------------------------------------------------------------*/
+/*  TEXTOS:                                                                            */
+/*-------------------------------------------------------------------------------------*/
+
+  #text_mission > p 
+   {
+      margin-left      : 3vw;
+      padding          : 5%; 
+      padding-top      : 20vh;    
+      width            : 90vw;
+      font-size        : 3.9vw;
+   }
+
+   .informacion1
+      {
+    padding: 9%;
+    margin-top: 2vh;
+    font-size: 1em;
+    font-family: "Quicksand_Light";
+    text-align: justify;
+    background-color: rgba(255,255,255,0.7);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    position: absolute;
+      }
+
+
+    .informacion2
+      {
+    padding: 9%;
+    margin-top: 1vh;
+    font-size: 1em;
+    font-family: "Quicksand_Light";
+    text-align: justify;
+    background-color: rgba(255,255,255,0.7);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    position: absolute;
+      } 
+
+  #text_minor 
+    {
+    margin: 4%;
+    font-family: "Quicksand_Light";
+    font-size: 10vw;
+    position: relative;
+    top: 4%;
+    z-index: 90;
+    left: 8%;
+    font-weight: 900;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    }
+
+
+
+
+  
+  #text_philosophy {
+    font-family: "Quicksand_Light";
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    width: 77%;
+    text-align: -webkit-center;
+
+  }
+
+.texto1
+  {
+    font-family : "Quicksand_Light";
+    font-size   : 1.5em;
+    text-align  : justify;
+  }
+
+.section-title-right
+  {
+    width: 50vh;
+    font-family: "Quicksand_Light";
+    font-size: 10vw;
+    position: relative;
+    top: 4%;
+    z-index: 90;
+    left: 8%;
+    font-weight: 900;
+    margin-top: 6vh;
+    margin-bottom: 3vh;
+  }
+
+  .section-title-left
+  {
+   width: 50vh;
+    font-family: "Quicksand_Light";
+    font-size: 10vw;
+    position: relative;
+    top: 4%;
+    z-index: 90;
+    left: 8%;
+    font-weight: 900;
+    margin-top: 6vh;
+    margin-bottom: 3vh;
+  }
+
+@media ( min-width: 768px )
+  {  
+
+  
+    .informacion1 
+      {
+      font-family: "Quicksand_Book";
+      font-size: 1.3vw;
+      background-color: rgba(255,255,255,0.7);
+      position: relative;
+      left: 3%;
+      z-index: 9;
+      padding: 3%;
+      margin: 0px;
+      margin-top: 26vh;
+      width: 62vw;
+      text-align: justify;
+      }
+
+    .informacion2 
+      {
+      font-family: "Quicksand_Book";
+      font-size: 1.3vw;
+      background-color: rgba(255,255,255,0.7);
+      position: relative;
+      left: 34vw;
+      z-index: 9;
+      padding: 3%;
+      margin: 0px;
+      margin-top: 21vh;
+      width: 62vw;
+      text-align: justify; 
+      }  
+    #text_philosophy {
+    font-family    : "Quicksand_Light";
+    position       : absolute;
+    top            : 70%;
+    left           : 10%;
+    width          : 77%;
+    text-align     : -webkit-center;
+
+  }
+
+  .section-title-left
+    {
+      font-family : "Quicksand_Light";
+      width       : 100vh;
+      font-size   : 5vw;
+      position    : relative;
+      top         : 27%;
+      left        : 4%;
+      z-index     : 90;
+      font-weight : 900;
+    }
+
+  .section-title-right
+    {
+      width: 97vh;
+      font-family: "Quicksand_Light";
+      font-size: 5vw;
+      position: relative;
+      top: 21vh;
+      z-index: 90;
+      font-weight: 900;
+      margin-left: 36vw;
+    }
+
+    #text_minor 
+    {
+    font-family: "Quicksand_Light";
+    font-size: 5vw;
+    position: relative;
+    top: 13vh;
+    z-index: 90;
+    font-weight: 900;
+    margin-left: 30vw;
+    margin-top: 7vh;
+    margin-bottom: 0%;
+    }
+
+  }
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------*/
+/*  TEXTOS:                                                                            */
+/*-------------------------------------------------------------------------------------*/
+
+.modal
+  {
+    text-align: center;
+  }
+
+.modal:before
+  {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modal-content
+  {
+    background-color : rgba( 0 , 0 , 0 , 0.5 );
+    border-radius: 0px;
+    border: 0px;
+  }
+
+.modal-header
+  {
+    border:0px;
+  }
+
+.modal h4
+  {
+  font-family: "Quicksand_Book";
+  color:#FFFFFF;
+  }
+
+.close
+  {
+    visibility: hidden;
+  }
+
+.modal label
+  {
+    font-family: "Quicksand_Light";
+    color:#FFFFFF;
+
+  }
+
+.fade
+{
+    height: 100vh;
+    background-color : rgba( 0 , 0 , 0 , 0.7 );
+}
+
+/*-------------------------------------------------------------------------------------*/
